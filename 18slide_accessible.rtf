@@ -1,0 +1,228 @@
+{\rtf1\ansi\ansicpg1252
+{\fonttbl
+{\f1\fnil\fcharset0\fprq0 Arial;}
+{\f2\fnil\fcharset0\fprq0 Times New Roman;}
+{\f3\fnil\fcharset0\fprq0 Verdana;}
+{\f4\fnil\fcharset0\fprq0 Courier New;}
+}
+{\colortbl;
+\red0\green127\blue163;
+\red0\green0\blue0;
+\red0\green0\blue255;
+}
+{\stylesheet
+{\s1\loch\af1\dbch\f1\fs32\cf2\lang1033\level1 heading 1;}
+{\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\level2 heading 2;}
+{\s3\li1440\loch\af1\dbch\f1\fs28\cf2\lang1033\level3 heading 3;}
+{\s4\li2160\loch\af1\dbch\f1\fs28\cf2\lang1033\level4 heading 4;}
+{\s5\li2880\loch\af1\dbch\f1\fs28\cf2\lang1033\level5 heading 5;}
+{\s6\li3600\loch\af1\dbch\f1\fs28\cf2\lang1033\level6 heading 6;}
+{\s7\li4320\loch\af1\dbch\f1\fs28\cf2\lang1033\level7 heading 7;}
+{\s8\li5040\loch\af1\dbch\f1\fs28\cf2\lang1033\level8 heading 8;}
+{\s9\li5760\loch\af1\dbch\f1\fs28\cf2\lang1033\level9 heading 9;}
+}
+\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs60\cf1 Introduction to Java Programming and Data Structures\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs40\cf1 Thirteenth Edition\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\qc {\b\dbch\af1\loch\f1\fs60 Chapter 18\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\qc {\dbch\af1\loch\f1\fs44 Recursion\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\qr {\dbch\af3\loch\f3\fs24 Copyright \'a9 }{\dbch\af3\loch\f3\fs24 2024 }{\dbch\af3\loch\f3\fs24 Pearson Education, Inc. All Rights Reserved\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Motivations }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Suppose you want to find all the files under a directory that contains a particular word. How do you solve this problem? There are several ways to solve this problem. An intuitive solution is to use recursion by searching the files in the subdirectories recursively.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Motivations }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 H-trees, depicted in Figure 18.1, are used in a very large-scale integration (V}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 L}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 S}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 I) design as a clock distribution network for routing timing signals to all parts of a chip with equal propagation delays. How do you write a program to display H-trees? A good approach is to use recursion.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Objectives }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.1}{\dbch\af1\loch\f1\fs44  To describe what a recursive method is and the benefits of using recursion (\'a718.1).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.2}{\dbch\af1\loch\f1\fs44  To develop recursive methods for recursive mathematical functions (\'a7\'a718.2\'9618.3).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.3}{\dbch\af1\loch\f1\fs44  To explain how recursive method calls are handled in a call stack (\'a7\'a718.2\'9618.3).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.4}{\dbch\af1\loch\f1\fs44  To solve problems using recursion (\'a718.4).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.5}{\dbch\af1\loch\f1\fs44  To use an overloaded helper method to derive a recursive method (\'a718.5).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.6}{\dbch\af1\loch\f1\fs44  To implement a selection sort using recursion (\'a718.5.1).\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Objectives }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.7}{\dbch\af1\loch\f1\fs44  To implement a binary search using recursion (\'a718.5.2).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.8}{\dbch\af1\loch\f1\fs44  To get the directory size using recursion (\'a718.6).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.9}{\dbch\af1\loch\f1\fs44  To solve the Tower of Hanoi problem using recursion (\'a718.7).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.10}{\dbch\af1\loch\f1\fs44  To draw fractals using recursion (\'a718.8).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.11}{\dbch\af1\loch\f1\fs44  To discover the relationship and difference between recursion and iteration (\'a718.9).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs44\cf1 18.12}{\dbch\af1\loch\f1\fs44  To know tail-recursive methods and why they are desirable (\'a718.10).\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Computing Factorial }{\dbch\af1\loch\f1\fs40\cf1 (1 of 11)}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Mathematic notation:\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Function:\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 ComputeFactorial}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Computing Factorial }{\dbch\af1\loch\f1\fs40\cf1 (2 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Computing Factorial }{\dbch\af1\loch\f1\fs40\cf1 (3 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Computing Factorial }{\dbch\af1\loch\f1\fs40\cf1 (4 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Computing Factorial }{\dbch\af1\loch\f1\fs40\cf1 (5 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Computing Factorial }{\dbch\af1\loch\f1\fs40\cf1 (6 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Computing Factorial }{\dbch\af1\loch\f1\fs40\cf1 (7 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Computing Factorial }{\dbch\af1\loch\f1\fs40\cf1 (8 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Computing Factorial }{\dbch\af1\loch\f1\fs40\cf1 (9 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Computing Factorial }{\dbch\af1\loch\f1\fs40\cf1 (10 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Computing Factorial }{\dbch\af1\loch\f1\fs40\cf1 (11 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace Recursive Factorial }{\dbch\af1\loch\f1\fs40\cf1 (1 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace Recursive Factorial }{\dbch\af1\loch\f1\fs40\cf1 (2 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace Recursive Factorial }{\dbch\af1\loch\f1\fs40\cf1 (3 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace Recursive Factorial }{\dbch\af1\loch\f1\fs40\cf1 (4 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace Recursive Factorial }{\dbch\af1\loch\f1\fs40\cf1 (5 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace Recursive Factorial }{\dbch\af1\loch\f1\fs40\cf1 (6 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace Recursive Factorial }{\dbch\af1\loch\f1\fs40\cf1 (7 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace Recursive Factorial }{\dbch\af1\loch\f1\fs40\cf1 (8 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace Recursive Factorial }{\dbch\af1\loch\f1\fs40\cf1 (9 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace Recursive Factorial }{\dbch\af1\loch\f1\fs40\cf1 (10 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace Recursive Factorial }{\dbch\af1\loch\f1\fs40\cf1 (11 of 11)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs2\cf1   factorial left parenthesis 4 right parenthesis}{\b\dbch\af1\loch\f1\fs72\cf1                   Stack Trace\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Other Examples\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Fibonacci Numbers }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs48 Fibonacci series: 0 1 1 2 3 5 8 13 21 34 55 89\'85\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs48 indices: 0 1 2 3 4 5 6 7 8 9 10 11}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 ComputeFibonacci}{\ul\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Fibonacci Numbers }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs64\cf1 Problem Solving Using Recursion }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 In general, to solve a problem using recursion, you break it into subproblems. If a subproblem resembles the original problem, you can apply the same approach to solve the subproblems recursively. A subproblem is almost the same as the original problem in nature with a smaller size.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Characteristics of Recursion\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 All recursive methods have the following characteristics:\par 
+}\pard\plain\ltrpar\s3\li1440\loch\af1\dbch\f1\fs28\cf2\lang1033\li1170\fi-448 {\pntext\pard\dbch\af1\loch\f1\fs48 \'96\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'96}}{\dbch\af1\loch\f1\fs48 The method is implemented using a conditional statement that leads to different cases.\par 
+}\pard\plain\ltrpar\s3\li1440\loch\af1\dbch\f1\fs28\cf2\lang1033\li1170\fi-448 {\pntext\pard\dbch\af1\loch\f1\fs48 \'96\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'96}}{\dbch\af1\loch\f1\fs48 One or more base cases (the simplest case) are used to stop recursion.\par 
+}\pard\plain\ltrpar\s3\li1440\loch\af1\dbch\f1\fs28\cf2\lang1033\li1170\fi-448 {\pntext\pard\dbch\af1\loch\f1\fs48 \'96\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'96}}{\dbch\af1\loch\f1\fs48 Every recursive call reduces the original problem, bringing it increasingly closer to a base case until it becomes that case.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs64\cf1 Problem Solving Using Recursion }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\b\dbch\af1\loch\f1\fs40\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs36 nPrintln(\'93Welcome\'94, n);\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs36 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs36{\pntxtb \'95}}{\dbch\af1\loch\f1\fs36 one is to print the message one time and the other is to print the message for }{\dbch\af1\loch\f4\fs36 n-1}{\dbch\af1\loch\f1\fs36  times.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs36 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs36{\pntxtb \'95}}{\dbch\af1\loch\f1\fs36 The second problem is the same as the original problem with a smaller size.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs36 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs36{\pntxtb \'95}}{\dbch\af1\loch\f1\fs36 The base case for the problem is }{\dbch\af1\loch\f4\fs36 n==0}{\dbch\af1\loch\f1\fs36 . You can solve this problem using recursion as follows:\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs36 public static void nPrintln(String message, int n) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\dbch\af1\loch\f4\fs36 if (n >= 1) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\dbch\af1\loch\f4\fs36 System.out.println(message);\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\dbch\af1\loch\f4\fs36 nPrintln(message, n - 1);\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\dbch\af1\loch\f4\fs36 \'7d // The base case is n < 1\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs36 \'7d\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Think Recursively\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs32 Many of the problems presented in the early chapters can be solved using recursion if you }{\b\dbch\af1\loch\f1\fs32 think recursively}{\dbch\af1\loch\f1\fs32 . For example, the palindrome problem can be solved recursively as follows:\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs32 public static boolean isPalindrome(String s) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\dbch\af1\loch\f4\fs32 if (s.length() <= 1) // Base case\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\dbch\af1\loch\f4\fs32 return true;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\dbch\af1\loch\f4\fs32 else if (s.charAt(0) != s.charAt(s.length() - 1)) // Base case\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\dbch\af1\loch\f4\fs32 return false;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\dbch\af1\loch\f4\fs32 else\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\dbch\af1\loch\f4\fs32 return isPalindrome(s.substring(1, s.length() - 1));\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs32 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 RecursivePalindromeUsingSubstring}{\ul\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Recursive Helper Methods }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Sometimes you can find a solution by defining a recursive method to a problem similar to the original problem. This new method is called a recursive helper method. The original method can be solved by invoking the recursive helper method.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Recursive Helper Methods }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs32 The preceding recursive isPalindrome method is not efficient, because it creates a new string for every recursive call. To avoid creating new strings, use a helper method:\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs32 public static boolean isPalindrome(String s) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\dbch\af1\loch\f4\fs32 return isPalindrome(s, 0, s.length() - 1);\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs32 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs32 public static boolean isPalindrome(String s, int low, int high) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\dbch\af1\loch\f4\fs32 if (high <= low) // Base case\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\dbch\af1\loch\f4\fs32 return true;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\dbch\af1\loch\f4\fs32 else if (s.charAt(low) != s.charAt(high)) // Base case\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\dbch\af1\loch\f4\fs32 return false;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\dbch\af1\loch\f4\fs32 else\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\dbch\af1\loch\f4\fs32 return isPalindrome(s, low + 1, high - 1);\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs32 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 RecursivePalindrome}{\ul\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Recursive Selection Sort\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Find the smallest number in the list and swaps it with the first number.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Ignore the first number and sort the remaining smaller list recursively.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 RecursiveSelectionSort}{\ul\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Recursive Binary Search\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Case 1: If the key is less than the middle element, recursively search the key in the first half of the array.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Case 2: If the key is equal to the middle element, the search ends with a match.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Case 3: If the key is greater than the middle element, recursively search the key in the second half of the array.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 RecursiveBinarySearch}{\ul\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Recursive Implementation }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs32 /** Use binary search to find the key in the list */\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs32 public static int recursiveBinarySearch(int[] list, int key) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs32 int low = 0;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs32 int high = list.length - 1;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs32 return recursiveBinarySearch(list, key, low, high);\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs32 \'7d\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Recursive Implementation }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\b\dbch\af1\loch\f1\fs40\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs32 /** Use binary search to find the key in the list between\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\b\dbch\af1\loch\f4\fs32 list[low] list[high] */\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs32 public static int recursiveBinarySearch(int[] list, int key,\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs32 int low, int high) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs32 if (low > high) // The list has been exhausted without a match\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\b\dbch\af1\loch\f4\fs32 return -low - 1;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs32 int mid = (low + high) / 2;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs32 if (key < list[mid])\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\b\dbch\af1\loch\f4\fs32 return recursiveBinarySearch(list, key, low, mid - 1);\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs32 else if (key == list[mid])\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\b\dbch\af1\loch\f4\fs32 return mid;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs32 else\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li567 {\b\dbch\af1\loch\f4\fs32 return recursiveBinarySearch(list, key, mid + 1, high);\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs32 \'7d\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Directory Size }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 The preceding examples can easily be solved without using recursion. This section presents a problem that is difficult to solve without using recursion. The problem is to find the size of a directory. The size of a directory is the sum of the sizes of all files in the directory. A directory may contain subdirectories. Suppose a directory contains files , , \'85, , and subdirectories , , \'85, , as shown below.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Directory Size }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 The size of the directory can be defined recursively as follows:\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 DirectorySize}{\ul\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Tower of Hanoi }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 There are }{\i\dbch\af1\loch\f1\fs48 n}{\dbch\af1\loch\f1\fs48  disks labeled 1, 2, 3, \'85, }{\i\dbch\af1\loch\f1\fs48 n}{\dbch\af1\loch\f1\fs48 , and three towers labeled A, B, and C.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 No disk can be on top of a smaller disk at any time.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 All the disks are initially placed on tower A.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Only one disk can be moved at a time, and it must be the top disk on the tower.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Tower of Hanoi Animation\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\ul\dbch\af1\loch\f1\fs48 https://liveexample.pearsoncmg.com/dsanimation/TowerOfHanoi.html}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Tower of Hanoi }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Solution to Tower of Hanoi }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 The Tower of Hanoi problem can be decomposed into three subproblems.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Solution to Tower of Hanoi }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Move the first}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs48 disks from A to C with the assistance}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403 {\dbch\af1\loch\f1\fs48 of tower B.}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Move disk }{\ul\dbch\af1\loch\f4\fs48 n}{\dbch\af1\loch\f1\fs48  from A to B.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Move}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 disks from C to B with the assistance}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403 {\dbch\af1\loch\f1\fs48 of tower A.}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 TowerOfHanoi}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Exercise 18.3 G}{\b\dbch\af1\loch\f1\fs2\cf1  }{\b\dbch\af1\loch\f1\fs72\cf1 C}{\b\dbch\af1\loch\f1\fs2\cf1  }{\b\dbch\af1\loch\f1\fs72\cf1 D\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs48 gcd(2, 3) = 1\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs48 gcd(2, 10) = 2\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs48 gcd(25, 35) = 5\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs48 gcd(205, 301) = 5\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs48 gcd(m, n)\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Approach 1: Brute-force, start from }{\dbch\af1\loch\f4\fs48 min(n, m) }{\dbch\af1\loch\f1\fs48 down to 1, to check if a number is common divisor for both m and n, if so, it is the greatest common divisor.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Approach 2: }{\dbch\af1\loch\f4\fs48 Euclid\'92s}{\dbch\af1\loch\f1\fs48  algorithm\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Approach 3: Recursive method\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Approach 2: }{\b\dbch\af1\loch\f4\fs72\cf1 Euclid\'92s}{\b\dbch\af1\loch\f1\fs72\cf1  Algorithm\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs44 // Get absolute value of m and n;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs44 t1 = Math.abs(m); t2 = Math.abs(n);\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs44 // r is the remainder of t1 divided by t2;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs44 r = t1 % t2;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs44 while (r != 0) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs44 t1 = t2;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs44 t2 = r;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li284 {\b\dbch\af1\loch\f4\fs44 r = t1 % t2;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs44 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs44 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs44 // When r is 0, t2 is the greatest common\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs44 // divisor between t1 and t2\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs44 return t2;\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Approach 3: }{\b\dbch\af1\loch\f4\fs72\cf1 Recursive }{\b\dbch\af1\loch\f1\fs72\cf1 Method\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs48 gcd(m, n) = n if m % n = 0;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs48 gcd(m, n) = gcd(n, m % n); otherwise;\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Fractals\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 A fractal is a geometrical figure just like triangles, circles, and rectangles, but fractals can be divided into parts, each of which is a reduced-size copy of the whole. There are many interesting examples of fractals. This section introduces a simple fractal, called }{\b\dbch\af1\loch\f1\fs48 Sierpinski triangle}{\dbch\af1\loch\f1\fs48 , named after a famous Polish mathematician.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Sierpinski Triangle\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs32 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs32{\pntxtb \'95}}{\dbch\af1\loch\f1\fs32 It begins with an equilateral triangle, which is considered to be the }{\dbch\af1\loch\f1\fs32 Sierpinski}{\dbch\af1\loch\f1\fs32  fractal of order (or level) 0, as shown in Figure (a).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs32 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs32{\pntxtb \'95}}{\dbch\af1\loch\f1\fs32 Connect the midpoints of the sides of the triangle of order 0 to create a }{\dbch\af1\loch\f1\fs32 Sierpinski}{\dbch\af1\loch\f1\fs32  triangle of order 1, as shown in Figure (b).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs32 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs32{\pntxtb \'95}}{\dbch\af1\loch\f1\fs32 Leave the center triangle intact. Connect the midpoints of the sides of the three other triangles to create a }{\dbch\af1\loch\f1\fs32 Sierpinski}{\dbch\af1\loch\f1\fs32  of order 2, as shown in Figure (c).\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li680\fi-680 {\pntext\pard\dbch\af1\loch\f1\fs32 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs32{\pntxtb \'95}}{\dbch\af1\loch\f1\fs32 You can repeat the same process recursively to create a }{\dbch\af1\loch\f1\fs32 Sierpinski}{\dbch\af1\loch\f1\fs32  triangle of order 3, 4, \'85, and so on, as shown in Figure (d).\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Sierpinski Triangle Solution\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 SierpinskiTriangle\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Recursion v}{\b\dbch\af1\loch\f1\fs2\cf1 ersu}{\b\dbch\af1\loch\f1\fs72\cf1 s Iteration\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Recursion is an alternative form of program control. It is essentially repetition without a loop.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Recursion bears substantial overhead. Each time the program calls a method, the system must assign space for all of the method\'92s local variables and parameters. This can consume considerable memory and requires extra time to manage the additional space.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Advantages of Using Recursion\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Recursion is good for solving the problems that are inherently recursive.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Tail Recursion\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 A recursive method is said to be }{\b\dbch\af1\loch\f1\fs48 tail recursive }{\dbch\af1\loch\f1\fs48 if there are no pending operations to be performed on return from a recursive call.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Non-tail recursive\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 ComputeFactorial}{\ul\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Tail recursive\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 ComputeFactorialTailRecursion}{\ul\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Copyright\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li160 {\b\dbch\af1\loch\f1\fs32 This work is protected by United States copyright laws and is provided solely for the use of instructors in teaching their courses and assessing student learning. Dissemination or sale of any part of this work (including on the World Wide Web) will destroy the integrity of the work and is not permitted. The work and materials from it should never be made available to students except by instructors using the accompanying text in their classes. All recipients of this work are expected to abide by these restrictions and to honor the intended pedagogical purposes and the needs of other instructors who rely on these materials.\par 
+}
+}
